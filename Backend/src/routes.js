@@ -4,7 +4,7 @@ const Indicators = require('./controllers/IndicatorsController');
 
 const routes = express.Router();
 
-routes.get('/', Indicators.graphics);
+routes.get('/indicators', Indicators.graphics);
 
 
 module.exports = routes;

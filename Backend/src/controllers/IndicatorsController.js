@@ -4,9 +4,9 @@ const options = require('../database/options');
 module.exports = {
   async graphics(req,res){
     const errorsData = "Não existe dados para ser retornados";
-    const sqlCured = 'SELECT count(*) FROM cps1 as cps inner join escalacovid as esc on esc.codigocps = cps.codigocps where cps.motivo = 1 and cps.datasaida is not null';
-    const sqlConfirmed = 'SELECT COUNT(*) FROM ESCALACOVID';
-    const sqlDeath = 'SELECT count(*) FROM cps1 as cps inner join escalacovid as esc on esc.codigocps = cps.codigocps where cps.motivo = 2 and cps.datasaida is not null';
+    const sqlCured = 'SELECT count(*) as qtdCured FROM cps1 as cps inner join escalacovid as esc on esc.codigocps = cps.codigocps where cps.motivo = 1 and cps.datasaida is not null';
+    const sqlConfirmed = 'SELECT count(*) as qtdConfirmed FROM ESCALACOVID';
+    const sqlDeath = 'SELECT count(*) as qtdDeaths FROM cps1 as cps inner join escalacovid as esc on esc.codigocps = cps.codigocps where cps.motivo = 2 and cps.datasaida is not null';
     
     try{
       await client.attach(options, (err,db)=>{
@@ -33,7 +33,7 @@ module.exports = {
                               return res.send(JSON.stringify({
                                 cured,
                                 confirmed,
-                                deaths,
+                                deaths
                               }));
                             }else{
                               res
