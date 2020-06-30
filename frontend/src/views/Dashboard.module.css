@@ -1,0 +1,25 @@
+.container {
+    height: 80vh;
+    width: 100%;
+    background: var(--theme-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.leitosContainer {
+    height: 70vh;
+    width: 100%;
+    background: var(--theme-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.EmptyContainer{
+    height: 10vh;
+    width: 100%;
+    background: var(--theme-primary);
+}

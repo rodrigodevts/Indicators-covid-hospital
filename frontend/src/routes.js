@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Grapich from './components/Chart';
+import Grapichs from './views/Graphics';
+
 
 export default function Routes(){
   return(
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Grapich}></Route>
+        <Route path="/" component={Grapichs}></Route>
       </Switch>
     </BrowserRouter>
   )
