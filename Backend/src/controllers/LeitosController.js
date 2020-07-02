@@ -12,7 +12,7 @@ module.exports = {
         }else{
             db.query(sqlLeitos, (err,result)=>{
               try{
-                console.log('Buscando dados dos Leitos');
+                console.log('Conexão funcionando');
                   this.leitos = result;
 
                 if(result != undefined){

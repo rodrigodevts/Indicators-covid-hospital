@@ -15,18 +15,15 @@ module.exports = {
         }else{
             db.query(sqlCured, (err,result)=>{
               try{
-                console.log('Buscando curados');
                 this.cured = result;
-                // db.detach ();
                 if(result != undefined){
                   db.query(sqlConfirmed, (err,result)=>{
                     try{
-                      console.log('Buscando confirmados');
                       this.confirmed = result;
                       if(result != undefined){
                         db.query(sqlDeath, (err,result)=>{
                           try{
-                            console.log('Buscando óbitos');
+                            console.log('Conexão funcionando');
                             this.deaths = result;
                             if(result != undefined){
                               db.detach();
