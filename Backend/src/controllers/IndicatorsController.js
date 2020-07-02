@@ -17,7 +17,7 @@ module.exports = {
               try{
                 console.log('Buscando curados');
                 this.cured = result;
-                // db.detach();
+                // db.detach ();
                 if(result != undefined){
                   db.query(sqlConfirmed, (err,result)=>{
                     try{

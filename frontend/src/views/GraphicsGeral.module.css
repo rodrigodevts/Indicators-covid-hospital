@@ -8,7 +8,22 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.container header img{
+    left: 350px;
+}
+
 .leitosContainer {
+    height: 60vh;
+    width: 100%;
+    background: var(--theme-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.leitosTotalContainer {
     height: 70vh;
     width: 100%;
     background: var(--theme-primary);
@@ -19,7 +34,14 @@
     flex-direction: column;
 }
 .EmptyContainer{
-    height: 10vh;
-    width: 100%;
     background: var(--theme-primary);
+}
+.footerContainer footer{
+    height: 5vh;
+    background: var(--theme-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

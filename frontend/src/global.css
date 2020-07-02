@@ -8,9 +8,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --theme-primary:#6610f2;
 }
-body::-webkit-scrollbar-track{
-  background: #1e1e24;
-}
-body::-webkit-scrollbar-thumb{
-  background: #6649b8;
-}
